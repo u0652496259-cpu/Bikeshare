@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BikeShare – Alquiler de bicicletas de enduro y descenso</title>
+  <meta name="description" content="BikeShare: alquila bicicletas de enduro y descenso de forma rápida y segura. Seguro incluido, depósito y verificación de usuarios.">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#home" aria-label="BikeShare Home">
+        <!-- Minimal SVG logo: mountain + text -->
+        <svg width="36" height="28" viewBox="0 0 36 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M2 22 L12 8 L20 18 L26 10 L34 22" stroke="#19c37d" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span>BikeShare</span>
+      </a>
+      <nav class="nav">
+        <a href="#catalogo">Catálogo</a>
+        <a href="#como-funciona">Cómo funciona</a>
+        <a href="#seguridad">Seguridad</a>
+        <a href="#zonas">Zonas</a>
+        <a href="#contacto" class="btn btn-outline">Contacto</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Abrir menú">☰</button>
+    </div>
+  </header>
+
+  <main id="home">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <h1>Alquila bicicletas de <span class="accent">enduro</span> y <span class="accent">descenso</span> cerca de ti</h1>
+        <p class="lead">Encuentra la bici que necesitas al mejor precio, con pago seguro, depósito y verificación.</p>
+        <form class="search" onsubmit="return false;">
+          <input type="search" id="searchInput" placeholder="Buscar por zona, modelo o talla…" aria-label="Buscar bicis">
+          <button class="btn" id="searchBtn">Buscar bicis disponibles</button>
+        </form>
+        <div class="pill-row">
+          <div class="pill">🚴‍♂️ Enduro & DH</div>
+          <div class="pill">🛡️ Seguro y depósito</div>
+          <div class="pill">📍 Bikeparks y montaña</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CATÁLOGO -->
+    <section class="section" id="catalogo">
+      <div class="container">
+        <div class="section-head">
+          <h2>Catálogo de alquiler</h2>
+          <div class="filters">
+            <select id="typeFilter" aria-label="Filtrar por tipo">
+              <option value="">Todos los tipos</option>
+              <option value="Enduro">Enduro</option>
+              <option value="Downhill">Downhill</option>
+              <option value="Protecciones">Protecciones</option>
+            </select>
+            <select id="locationFilter" aria-label="Filtrar por ubicación">
+              <option value="">Todas las ubicaciones</option>
+              <option>Pirineos</option>
+              <option>Andorra</option>
+              <option>Asturias</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="grid" id="cards">
+          <!-- Cards renderizadas por JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- CÓMO FUNCIONA -->
+    <section class="section alt" id="como-funciona">
+      <div class="container">
+        <h2>Así de fácil es usar BikeShare</h2>
+        <div class="steps">
+          <div class="step">
+            <div class="step-num">1</div>
+            <h3>Busca</h3>
+            <p>Encuentra la bici ideal por zona, talla y tipo (Enduro o DH).</p>
+          </div>
+          <div class="step">
+            <div class="step-num">2</div>
+            <h3>Reserva</h3>
+            <p>Paga online de forma segura y deja un depósito reembolsable.</p>
+          </div>
+          <div class="step">
+            <div class="step-num">3</div>
+            <h3>Recoge</h3>
+            <p>Queda con el propietario o en punto de entrega del bikepark.</p>
+          </div>
+          <div class="step">
+            <div class="step-num">4</div>
+            <h3>Disfruta</h3>
+            <p>Monta con confianza; el seguro cubre daños y robo según póliza.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEGURIDAD -->
+    <section class="section" id="seguridad">
+      <div class="container">
+        <h2>Seguridad y confianza</h2>
+        <div class="features">
+          <div class="feature">
+            <div class="feature-emoji">🛡️</div>
+            <h3>Seguro</h3>
+            <p>Cobertura de daños y robo durante el periodo de alquiler.</p>
+          </div>
+          <div class="feature">
+            <div class="feature-emoji">🧾</div>
+            <h3>Depósito</h3>
+            <p>Depósito retenido en tarjeta y devuelto tras la devolución.</p>
+          </div>
+          <div class="feature">
+            <div class="feature-emoji">✅</div>
+            <h3>Verificación</h3>
+            <p>Usuarios verificados con documento de identidad.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ZONAS -->
+    <section class="section alt" id="zonas">
+      <div class="container">
+        <h2>Zonas destacadas</h2>
+        <div class="chips">
+          <span class="chip">Pirineos</span>
+          <span class="chip">Andorra</span>
+          <span class="chip">Asturias</span>
+          <span class="chip">La Molina</span>
+          <span class="chip">Vallnord</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="section" id="contacto">
+      <div class="container">
+        <h2>Contacto</h2>
+        <p>¿Tienes dudas o quieres publicar tu bici? Escríbenos:</p>
+        <form class="contact" action="https://formspree.io/f/mayvpneo" method="POST">
+          <div class="row">
+            <input type="text" name="name" placeholder="Nombre" required>
+            <input type="email" name="email" placeholder="Email" required>
+          </div>
+          <textarea name="message" rows="5" placeholder="Cuéntanos qué necesitas…" required></textarea>
+          <button class="btn" type="submit">Enviar</button>
+          <p class="tiny">*Este formulario usa un endpoint de ejemplo. Cámbialo por tu Google Form o servicio preferido en <code>index.html</code>.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <svg width="28" height="22" viewBox="0 0 36 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M2 22 L12 8 L20 18 L26 10 L34 22" stroke="#19c37d" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <strong>BikeShare</strong>
+      </div>
+      <nav class="footer-links">
+        <a href="#home">Inicio</a>
+        <a href="#catalogo">Catálogo</a>
+        <a href="#como-funciona">Cómo funciona</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <div class="legal">
+        <a href="#" onclick="openModal('legalModal')">Aviso legal</a>
+        <span>·</span>
+        <a href="#" onclick="openModal('privacyModal')">Privacidad</a>
+        <span>·</span>
+        <a href="#" onclick="openModal('cookiesModal')">Cookies</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modales legales mínimos -->
+  <div class="modal" id="legalModal" aria-hidden="true">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeModal('legalModal')" aria-label="Cerrar">×</button>
+      <h3>Aviso legal</h3>
+      <p>BikeShare es una plataforma que conecta propietarios y riders. No es propietario de las bicis ofertadas. Los contratos de alquiler se realizan entre las partes.</p>
+    </div>
+  </div>
+  <div class="modal" id="privacyModal" aria-hidden="true">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeModal('privacyModal')" aria-label="Cerrar">×</button>
+      <h3>Política de privacidad</h3>
+      <p>Los datos recogidos se usan únicamente para gestionar solicitudes y reservas. Puedes solicitar su eliminación escribiendo a contacto@bikeshare.test.</p>
+    </div>
+  </div>
+  <div class="modal" id="cookiesModal" aria-hidden="true">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeModal('cookiesModal')" aria-label="Cerrar">×</button>
+      <h3>Cookies</h3>
+      <p>Este sitio usa cookies técnicas para el funcionamiento básico. Puedes gestionarlas desde la configuración de tu navegador.</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
