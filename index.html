@@ -144,22 +144,22 @@
     </section>
 
     <!-- CONTACTO -->
-    <section class="section" id="contacto">
-      <div class="container">
-        <h2>Contacto</h2>
-        <p>¿Tienes dudas o quieres publicar tu bici? Escríbenos:</p>
-        <form class="contact" action="https://formspree.io/f/mayvpneo" method="POST">
-          <div class="row">
-            <input type="text" name="name" placeholder="Nombre" required>
-            <input type="email" name="email" placeholder="Email" required>
-          </div>
-          <textarea name="message" rows="5" placeholder="Cuéntanos qué necesitas…" required></textarea>
-          <button class="btn" type="submit">Enviar</button>
-          <p class="tiny">*Este formulario usa un endpoint de ejemplo. Cámbialo por tu Google Form o servicio preferido en <code>index.html</code>.</p>
-        </form>
-      </div>
-    </section>
-  </main>
+  <!-- modify this form HTML and place wherever you want your form -->
+<form
+  action="https://formspree.io/f/meoljdbe"
+  method="POST"
+>
+  <label>
+    Your email:
+    <input type="email" name="email">
+  </label>
+  <label>
+    Your message:
+    <textarea name="message"></textarea>
+  </label>
+  <!-- your other form fields go here -->
+  <button type="submit">Send</button>
+</form>
 
   <footer class="site-footer">
     <div class="container footer-inner">
